@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CustPopView" customModule="MyMacOs" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="c22-O7-iKe" id="apD-8t-No5"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView identifier="CustPopView" id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4Ka-Oe-qDl">
+                    <rect key="frame" x="-2" y="270" width="204" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="b11-6e-t3N"/>
+                    </constraints>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="pop标题" id="0qS-wB-qU1">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="4Ka-Oe-qDl" secondAttribute="trailing" id="0iT-e1-YJX"/>
+                <constraint firstItem="4Ka-Oe-qDl" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="Exd-E7-gHs"/>
+                <constraint firstItem="4Ka-Oe-qDl" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="hmM-ow-vJC"/>
+            </constraints>
+            <point key="canvasLocation" x="89" y="146"/>
+        </customView>
+    </objects>
+</document>
