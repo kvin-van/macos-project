@@ -49,23 +49,25 @@ class DrawView : NSView
 //        self.saveURL() // 成功
     }
     
+    //原来报错 Sandbox extension creation failed: client lacks entitlements? for path（沙盒扩展创建失败：客户端缺少权限？用于路径）
+    //因为把 Enable app Sanbox 设置成了 yes
     func saveOfImage(){
 //        self.lockFocus()
-        let pdfData : NSImage = NSImage(data: self.dataWithPDF(inside: self.bounds))!
+        let image = NSImage(data:self.dataWithPDF(inside: self.bounds))
 //        self.unlockFocus()
-        let imageData = pdfData.tiffRepresentation //转换成 data
-        let fileManage = FileManager.default
+        let imageData = image!.tiffRepresentation//转换成 data
+        let fileManager = FileManager.default
+        //写死的文件路径
         let path = "/Users/wangbendong/Desktop/ceshi.png"
-//        let path = "/Users/wangbendong/Documents/ceshi.png"
-        if (fileManage.createFile(atPath: path, contents: imageData ,attributes: nil)){
-            print("保存成功")
-        }else{
-            print("保存失败")
-        }
-        
+        if(fileManager.createFile(atPath: path, contents: imageData, attributes: nil)){
+        print("保存成功")
+    }else{
+        print("保存失败")
+    }
+    
         //定位文件路径
-        let  fileUrl = URL(fileURLWithPath: path)
-        NSWorkspace.shared.activateFileViewerSelecting([fileUrl])//里面是 数组很容易忽略
+        let fileURL = URL(fileURLWithPath: path)
+        NSWorkspace.shared.activateFileViewerSelecting([fileURL])//里面是 数组很容易忽略
     }
     
     //保存

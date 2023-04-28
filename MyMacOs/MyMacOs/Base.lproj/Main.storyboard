@@ -774,7 +774,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="998" constant="50" id="AgN-90-seM"/>
                                 </constraints>
                                 <textFieldCell key="cell" selectable="YES" alignment="right" title="换行：222" id="IjB-p1-Ba8">
-                                    <font key="font" metaFont="system" size="12"/>
+                                    <font key="font" metaFont="cellTitle"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -871,8 +871,8 @@
                                 </constraints>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" datePickerStyle="clockAndCalendar" useCurrentDate="YES" id="hJ6-C8-uLQ">
                                     <font key="font" metaFont="system"/>
-                                    <date key="date" timeIntervalSinceReferenceDate="700734759.58936906">
-                                        <!--2023-03-17 08:32:39 +0000-->
+                                    <date key="date" timeIntervalSinceReferenceDate="703586892.61146498">
+                                        <!--2023-04-19 08:48:12 +0000-->
                                     </date>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -889,8 +889,8 @@
                                 </constraints>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" useCurrentDate="YES" id="tIl-3y-gKX">
                                     <font key="font" metaFont="system"/>
-                                    <date key="date" timeIntervalSinceReferenceDate="700734779.74091196">
-                                        <!--2023-03-17 08:32:59 +0000-->
+                                    <date key="date" timeIntervalSinceReferenceDate="703586892.61582994">
+                                        <!--2023-04-19 08:48:12 +0000-->
                                     </date>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>

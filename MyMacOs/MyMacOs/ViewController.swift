@@ -219,7 +219,7 @@ class ViewController: NSViewController,NSTextFieldDelegate,NSSplitViewDelegate,N
          scaleProportionallyDown （中心）按比例向下
          scaleProportionallyUpOrDown  按比例向上或向下缩放
          */
-        headImageView.imageScaling = .scaleProportionallyUpOrDown
+        headImageView.imageScaling = .scaleProportionallyUpOrDown //等比显示
         
         //进度条
         self.progress.doubleValue+=10  //先执行
