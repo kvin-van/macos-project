@@ -37,29 +37,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.createButtonStatusBarForPopover()
     }
     
+    //创建按钮状态栏
     func createButtonStatusBar() {
-        
         //获取系统单例NSStatusBar对象
         let statusBar = NSStatusBar.system
         //创建固定宽度的NSStatusItem
         let item = statusBar.statusItem(withLength: NSStatusItem.squareLength)
         item.button?.target = self
         item.button?.action = #selector(AppDelegate.itemAction(_:))
-        item.button?.image = NSImage(named: NSImage.Name(rawValue: "blue"))
-        
-        statusItem = item
-    }
-    
-    //创建弹出按钮状态栏
-    func createButtonStatusBarForPopover() {
-        
-        //获取系统单例NSStatusBar对象
-        let statusBar = NSStatusBar.system
-        //创建固定宽度的NSStatusItem
-        let item = statusBar.statusItem(withLength: NSStatusItem.squareLength)
-        item.button?.target = self
-        item.button?.action = #selector(AppDelegate.itemPopoverAction(_:))
-        item.button?.image = NSImage(named: NSImage.Name(rawValue: "blue"))
+        item.button?.image = NSImage(named: NSImage.Name(rawValue: "greenImg"))//greenImg   blue
         
         statusItem = item
     }
@@ -70,14 +56,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let statusBar = NSStatusBar.system
         //创建固定宽度的NSStatusItem
         let item = statusBar.statusItem(withLength: NSStatusItem.squareLength)
-        item.button?.image = NSImage(named: NSImage.Name(rawValue: "blue"))
-        item.menu = self.shareMenu
+        item.button?.image = NSImage(named: NSImage.Name(rawValue: "greenImg"))
+        item.menu = self.shareMenu  //twitter 没有配置action 所以灰色
         
         statusItem = item
     }
     
-    
-    
+    //创建弹出按钮状态栏
+    func createButtonStatusBarForPopover() {
+        //获取系统单例NSStatusBar对象
+        let statusBar = NSStatusBar.system
+        //创建固定宽度的NSStatusItem
+        let item = statusBar.statusItem(withLength: NSStatusItem.squareLength)
+        item.button?.target = self
+        item.button?.action = #selector(AppDelegate.itemPopoverAction(_:))
+        item.button?.image = NSImage(named: NSImage.Name(rawValue: "greenImg"))
+        
+        statusItem = item
+    }
     
     @IBAction func itemAction(_ sender: AnyObject){
         //激活应用到前台(如果应用窗口处于非活动状态)
@@ -86,12 +82,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.orderFront(self)
     }
     
+    //专门给 shareMenu  点击
     @IBAction func shareAction(_ sender: AnyObject){
         print("shareAction")
     }
     
-
-    
+    //添加页面popover
     @IBAction func itemPopoverAction(_ sender: NSStatusBarButton){
         if !self.isShow {
             self.isShow = true
