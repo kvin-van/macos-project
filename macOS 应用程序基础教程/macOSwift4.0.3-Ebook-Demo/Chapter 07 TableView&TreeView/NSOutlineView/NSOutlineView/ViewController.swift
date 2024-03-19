@@ -147,13 +147,6 @@ class ViewController: NSViewController {
 }
 
 
-
-
-
-
-
-
-
 extension ViewController: NSOutlineViewDelegate {
     
     func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any) -> NSView? {
@@ -191,8 +184,6 @@ extension ViewController: NSOutlineViewDelegate {
         print("p:\(p)")
     }
 }
-
-
 
 
 extension ViewController: NSOutlineViewDataSource {
